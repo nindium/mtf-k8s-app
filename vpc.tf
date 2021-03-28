@@ -1,5 +1,5 @@
 locals {
-    az_names = ["us-east-1a", "us-east-1b"]
+  az_names = ["us-east-1a", "us-east-1b"]
 }
 
 
@@ -50,4 +50,5 @@ resource "aws_route_table_association" "pubas" {
   subnet_id      = aws_subnet.public_subnet[count.index].id
   route_table_id = aws_route_table.public_rt.id
 }
+
 
